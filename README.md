@@ -1,50 +1,80 @@
-# Welcome to your Expo app 👋
+# 📱 LinaMath
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicación móvil desarrollada con **React Native** y **Expo Go**, enfocada en una aplicacion para la enseñanaza del area de la aritmetica en los grados 6 y 7 de la institucion educativa cincuentenario de fabricato 
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Tecnologías utilizadas
 
-   ```bash
-   npm install
-   ```
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+- [TypeScript]
+- [React Navigation](https://reactnavigation.org/)
+- [Fetch]
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## ⚙️ Instalación y configuración
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+### 1. Clonar el repositorio
 ```bash
-npm run reset-project
+git clone https://github.com/tu-usuario/tu-repo.git
+cd tu-repo
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Instalar dependencias
+```bash
+npm install
+# o
+yarn install
+```
 
-## Learn more
+### 3. Iniciar el proyecto en modo desarrollo
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+Esto abrirá el **Metro Bundler** en tu navegador.  
+Escanea el código QR con la app **Expo Go** (disponible en Google Play y App Store) para probar la app en tu dispositivo.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## 📂 Estructura del proyecto
 
-Join our community of developers creating universal apps.
+```bash
+.
+├── App.js                # Archivo principal de la aplicación
+├── app/                  # Navegación, pantallas o rutas (si usas el sistema App Router)
+├── assets/               # Imágenes, íconos y recursos estáticos
+├── components/           # Componentes reutilizables
+├── screens/              # Vistas principales
+├── hooks/                # Hooks personalizados
+├── utils/                # Funciones auxiliares
+├── package.json
+└── README.md
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+## 🧪 Scripts disponibles
+
+| Comando | Descripción |
+|----------|--------------|
+| `npm start` | Inicia el servidor de desarrollo de Expo |
+| `npm run android` | Ejecuta la app en un emulador o dispositivo Android |
+| `npm run ios` | Ejecuta la app en un emulador o dispositivo iOS |
+| `npm run web` | Ejecuta la app en el navegador |
+
+---
+
+## 🧑‍💻 Autor
+
+**Roquelina Palacios Córdoba**  
+📧 [linapalacios719@gmail.com]  
+📧 [palacios_28506@univdep.edu.mx]
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la licencia [MIT](LICENSE).
