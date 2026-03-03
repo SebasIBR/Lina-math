@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, FlatList, Pressable, Animated } from "react-nat
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import { theme } from "../src/theme";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const temas = [
   { id: "sumas", titulo: "Sumas", desc: "Operación para combinar cantidades." },
@@ -43,6 +44,7 @@ export default function TemasScreen() {
   const router = useRouter();
 
   return (
+    <SafeAreaView style={{ flex: 1 }}>
     <LinearGradient colors={[theme.colors.bg1, theme.colors.bg2]} style={styles.container}>
       <Text style={styles.header}>Temas</Text>
       <Text style={styles.subheader}>Selecciona un contenido para estudiar.</Text>
@@ -60,11 +62,12 @@ export default function TemasScreen() {
         )}
       />
     </LinearGradient>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20, paddingTop:60},
+  container: { flex: 1, padding: 20},
 
   header: { color: theme.colors.text, fontSize: 26, fontWeight: "900" },
   subheader: { marginTop: 6, color: theme.colors.textMuted, fontSize: 14 },

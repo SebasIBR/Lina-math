@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Pressable, Animated } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import { theme } from "../src/theme";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeScreen() {
   const router = useRouter();
@@ -18,6 +19,7 @@ export default function HomeScreen() {
   }, []);
 
   return (
+    <SafeAreaView style={{ flex: 1 }}>
     <LinearGradient colors={[theme.colors.bg1, theme.colors.bg2]} style={styles.container}>
       <Animated.View style={[styles.content, { opacity: fade, transform: [{ translateY: up }] }]}>
         <View style={styles.hero}>
@@ -55,6 +57,7 @@ export default function HomeScreen() {
         <Text style={styles.buttonText}>EMPEZAR</Text>
       </Pressable>
     </LinearGradient>
+    </SafeAreaView>
   );
 }
 
