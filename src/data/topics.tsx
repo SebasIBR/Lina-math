@@ -21,45 +21,70 @@ export type Topic = {
 
 export const TOPICS: Topic[] = [
   {
-    id: "sumas",
-    titulo: "Sumas",
+    id: "Números Enteros",
+    titulo: "Números Enteros",
     youtubeId: "VXDRr8MUwZw",
     texto:
-      "La suma combina cantidades para obtener un total. Identifica los datos y añade de forma ordenada.",
+      "Los números enteros son aquellos que no tienen parte decimal."+
+      " Incluyen números positivos.(1,2,3), el cero (0) y números negativos (-1, -2, -3)."+
+      "\n\nSe utilizan para representar situaciones como ganancias y pérdidas,"+
+      "temperaturas bajo cero o niveles por encima y debajo de un punto de referencia.",
     quiz: [
       {
-        id: "s1",
-        question: "¿Qué representa el resultado de una suma?",
+        id: "A1",
+        question: "El valor absoluto de |-5| es:",
         options: [
-          { id: "a", text: "La diferencia" },
-          { id: "b", text: "El total" },
-          { id: "c", text: "El reparto" },
+            { id: "a", text: "-5" },
+            { id: "b", text: "5" },
+            { id: "c", text: "55" },
         ],
         correctOptionId: "b",
-        feedback: "En una suma, el resultado es el total de las cantidades.",
-      },
-      {
-        id: "s2",
-        question: "Si tienes 8 lápices y te dan 5 más, ¿qué operación haces?",
+        feedback: "El valor absoluto representa la distancia al cero en la recta numérica, por eso |-5| = 5.",
+        },
+        {
+        id: "A2",
+        question: "El opuesto de 15 es:",
         options: [
-          { id: "a", text: "Resta" },
-          { id: "b", text: "Suma" },
-          { id: "c", text: "División" },
-        ],
-        correctOptionId: "b",
-        feedback: "Al aumentar una cantidad, normalmente sumas.",
-      },
-      {
-        id: "s3",
-        question: "12 + 7 es igual a:",
-        options: [
-          { id: "a", text: "17" },
-          { id: "b", text: "18" },
-          { id: "c", text: "19" },
+            { id: "a", text: "10" },
+            { id: "b", text: "51" },
+            { id: "c", text: "-15" },
         ],
         correctOptionId: "c",
-        feedback: "12 + 7 = 19.",
-      },
+        feedback: "El opuesto de un número es el mismo valor pero con signo contrario. El opuesto de 15 es -15.",
+        },
+        {
+        id: "A3",
+        question: "Los números enteros se representan con la letra:",
+        options: [
+            { id: "a", text: "X" },
+            { id: "b", text: "Y" },
+            { id: "c", text: "Z" },
+        ],
+        correctOptionId: "c",
+        feedback: "El conjunto de los números enteros se representa con la letra Z.",
+        },
+        {
+        id: "A4",
+        question: "El conjunto de los números enteros está formado por:",
+        options: [
+            { id: "a", text: "Positivos, negativos y el cero" },
+            { id: "b", text: "Racionales, irracionales y naturales" },
+            { id: "c", text: "Negativos, irracionales y reales" },
+        ],
+        correctOptionId: "a",
+        feedback: "Los números enteros incluyen los números positivos, los negativos y el cero.",
+        },
+        {
+        id: "A5",
+        question: "¿Qué número es mayor entre -5 y -10?",
+        options: [
+            { id: "a", text: "Son iguales" },
+            { id: "b", text: "-10" },
+            { id: "c", text: "-5" },
+        ],
+        correctOptionId: "c",
+        feedback: "En los números negativos, el que está más cerca del cero es el mayor. Por eso, -5 es mayor que -10.",
+        },
     ],
   },
 ];
