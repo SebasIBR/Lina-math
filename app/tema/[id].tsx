@@ -8,7 +8,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 const contenidos = {
   sumas: {
-    youtubeId: "toDqAGu1hmo",
+    youtubeId: "JHN-NiDw26U",
     texto: "La suma combina cantidades para obtener un total. Identifica los datos y añade de forma ordenada.",
     titulo: "Sumas",
   },
