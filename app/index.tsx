@@ -28,7 +28,7 @@ export default function HomeScreen() {
           <Text style={styles.title}>LINAMATH</Text>
 
           <Text style={styles.subtitle}>
-            Un espacio de aprendizaje diseñado para reforzar contenidos matemáticos
+            Un espacio de aprendizaje diseñado para reforzar contenidos matemáticos de aritmetica
             con explicaciones claras, recursos audiovisuales y acompañamiento paso a paso.
           </Text>
 
@@ -37,9 +37,9 @@ export default function HomeScreen() {
           <Text style={styles.sectionTitle}>En esta aplicación podrás:</Text>
 
           <View style={styles.list}>
-            <Text style={styles.bullet}>• Explorar temas de matemáticas de forma organizada.</Text>
+            <Text style={styles.bullet}>• Explorar temas de aritmetica de forma organizada.</Text>
             <Text style={styles.bullet}>• Ver videos explicativos para comprender cada contenido.</Text>
-            <Text style={styles.bullet}>• Leer un resumen breve para recordar lo más importante.</Text>
+            <Text style={styles.bullet}>• Leer un resumen breve para recordar lo más importante de cada tema.</Text>
           </View>
 
           <View style={styles.howBox}>
@@ -47,7 +47,8 @@ export default function HomeScreen() {
             <Text style={styles.howText}>
               1) Presiona <Text style={styles.bold}>Empezar</Text>.{"\n"}
               2) Elige un <Text style={styles.bold}>tema</Text>.{"\n"}
-              3) Mira el <Text style={styles.bold}>video</Text> y revisa la <Text style={styles.bold}>explicación</Text>.
+              3) Mira el <Text style={styles.bold}>video</Text> y revisa la <Text style={styles.bold}>explicación</Text>.{"\n"}
+              4) Resuelve el <Text style={styles.bold}>quiz</Text> y mira tus <Text style={styles.bold}>respuestas</Text>.
             </Text>
           </View>
         </View>
