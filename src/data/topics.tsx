@@ -19,8 +19,16 @@ export type Topic = {
   quiz: QuizQuestion[];
 };
 
-import { NUMEROS_ENTEROS_TOPICS } from "./temas/numerosEnteros";
+import { NUMEROS_ENTEROS } from "./temas/numerosEnteros";
+// import { ECUACIONES } from "./temas/ecuaciones";
+// import { FRACCIONES } from "./temas/fracciones";
+// import { PROPORCIONALIDAD } from "./temas/proporcionalidad";
+// import { MAGNITUDES } from "./temas/magnitudes";
 
 export const TOPICS: Topic[] = [
-  ...NUMEROS_ENTEROS_TOPICS,
+  ...NUMEROS_ENTEROS,
+  // ...ECUACIONES,
+  // ...FRACCIONES,
+  // ...PROPORCIONALIDAD,
+  // ...MAGNITUDES,
 ]
