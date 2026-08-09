@@ -20,15 +20,15 @@ export type Topic = {
 };
 
 import { NUMEROS_ENTEROS } from "./temas/numerosEnteros";
-// import { ECUACIONES } from "./temas/ecuaciones";
-// import { FRACCIONES } from "./temas/fracciones";
+import { ECUACIONES } from "./temas/ecuaciones";
+import { FRACCIONES } from "./temas/fracciones";
 // import { PROPORCIONALIDAD } from "./temas/proporcionalidad";
 // import { MAGNITUDES } from "./temas/magnitudes";
 
 export const TOPICS: Topic[] = [
   ...NUMEROS_ENTEROS,
-  // ...ECUACIONES,
-  // ...FRACCIONES,
+  ...ECUACIONES,
+  ...FRACCIONES,
   // ...PROPORCIONALIDAD,
   // ...MAGNITUDES,
 ]
