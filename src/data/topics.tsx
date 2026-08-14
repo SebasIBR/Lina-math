@@ -22,13 +22,13 @@ export type Topic = {
 import { NUMEROS_ENTEROS } from "./temas/numerosEnteros";
 import { ECUACIONES } from "./temas/ecuaciones";
 import { FRACCIONES } from "./temas/fracciones";
-// import { PROPORCIONALIDAD } from "./temas/proporcionalidad";
-// import { MAGNITUDES } from "./temas/magnitudes";
+import { PROPORCIONALIDAD } from "./temas/proporcionalidad";
+import { MAGNITUDES } from "./temas/magnitudes";
 
 export const TOPICS: Topic[] = [
   ...NUMEROS_ENTEROS,
   ...ECUACIONES,
   ...FRACCIONES,
-  // ...PROPORCIONALIDAD,
-  // ...MAGNITUDES,
+  ...PROPORCIONALIDAD,
+  ...MAGNITUDES,
 ]

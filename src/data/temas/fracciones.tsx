@@ -862,7 +862,7 @@ export const FRACCIONES : Topic[] = [
 {
   id: "division-fracciones",
   titulo: "División de fracciones",
-  youtubeId: "ID_DEL_VIDEO",
+  youtubeId: "Sqi2H6-UXpI",
 
   texto:
     "La división de fracciones permite repartir o determinar cuántas veces una fracción está contenida en otra." +
@@ -977,7 +977,7 @@ export const FRACCIONES : Topic[] = [
 {
   id: "potenciacion-fracciones",
   titulo: "Potenciación de fracciones",
-  youtubeId: "ID_DEL_VIDEO",
+  youtubeId: "S2yhvw-2R0Y",
 
   texto:
     "La potenciación de fracciones es una operación que consiste en multiplicar una fracción por sí misma varias veces." +
@@ -1075,7 +1075,7 @@ export const FRACCIONES : Topic[] = [
 {
   id: "numeros-mixtos",
   titulo: "Números mixtos",
-  youtubeId: "ID_DEL_VIDEO",
+  youtubeId: "HbtaSAVg_4I",
 
   texto:
     "Un número mixto es una expresión formada por un número entero y una fracción propia." +
@@ -1197,7 +1197,7 @@ export const FRACCIONES : Topic[] = [
 {
   id: "numeros-mixtos-parte-2",
   titulo: "Números mixtos - Parte 2",
-  youtubeId: "ID_DEL_VIDEO",
+  youtubeId: "hX-wYLcNgo4",
 
   texto:
     "En esta segunda parte aprenderemos a convertir un número mixto en una fracción impropia." +
@@ -1308,7 +1308,7 @@ export const FRACCIONES : Topic[] = [
 {
   id: "tecnicas-simplificar-fracciones",
   titulo: "Técnicas para simplificar fracciones",
-  youtubeId: "ID_DEL_VIDEO",
+  youtubeId: "_ijhXKBgnCA",
 
   texto:
     "Simplificar una fracción significa encontrar una fracción equivalente cuyos números sean más pequeños, sin cambiar su valor." +
@@ -1426,7 +1426,7 @@ export const FRACCIONES : Topic[] = [
 {
   id: "simplificacion-fracciones",
   titulo: "Simplificación de fracciones",
-  youtubeId: "ID_DEL_VIDEO",
+  youtubeId: "IeE6_h3kGf4",
 
   texto:
     "Simplificar una fracción consiste en expresarla de una forma más sencilla sin cambiar su valor." +
@@ -1530,7 +1530,7 @@ export const FRACCIONES : Topic[] = [
 {
   id: "simplificacion-fracciones-parte-2",
   titulo: "Simplificación de fracciones - Parte 2",
-  youtubeId: "ID_DEL_VIDEO",
+  youtubeId: "On13RW2DT2o",
 
   texto:
     "En esta segunda parte continuaremos simplificando fracciones utilizando números mayores y diferentes estrategias." +
@@ -1647,7 +1647,7 @@ export const FRACCIONES : Topic[] = [
 {
   id: "amplificacion-fracciones",
   titulo: "Amplificación de fracciones",
-  youtubeId: "ID_DEL_VIDEO",
+  youtubeId: "wV5eAOBzD24",
 
   texto:
     "Amplificar una fracción consiste en multiplicar su numerador y su denominador por el mismo número diferente de cero." +
@@ -1765,7 +1765,7 @@ export const FRACCIONES : Topic[] = [
 {
   id: "orden-comparacion-fracciones",
   titulo: "Orden o comparación de fracciones",
-  youtubeId: "ID_DEL_VIDEO",
+  youtubeId: "bzsp2igL2dE",
 
   texto:
     "Comparar fracciones significa determinar cuál de ellas representa una cantidad mayor, menor o si ambas representan la misma cantidad." +
@@ -1869,7 +1869,7 @@ export const FRACCIONES : Topic[] = [
 {
   id: "minimo-comun-multiplo",
   titulo: "Mínimo común múltiplo",
-  youtubeId: "ID_DEL_VIDEO",
+  youtubeId: "u941GlBsvEQ",
 
   texto:
     "El mínimo común múltiplo, también conocido como MCM, es el menor número positivo que es múltiplo común de dos o más números." +
@@ -1993,7 +1993,7 @@ export const FRACCIONES : Topic[] = [
 {
   id: "suma-fracciones-mcm",
   titulo: "Suma de fracciones con el MCM",
-  youtubeId: "ID_DEL_VIDEO",
+  youtubeId: "sv2Psh2J9O0",
 
   texto:
     "Cuando queremos sumar fracciones con denominadores diferentes, podemos utilizar el mínimo común múltiplo (MCM) para encontrar un denominador común." +
@@ -2102,7 +2102,7 @@ export const FRACCIONES : Topic[] = [
 {
   id: "resta-fracciones-mcm",
   titulo: "Resta de fracciones con el MCM",
-  youtubeId: "ID_DEL_VIDEO",
+  youtubeId: "5l4dUMOWCMw",
 
   texto:
     "Cuando queremos restar fracciones con denominadores diferentes, podemos utilizar el mínimo común múltiplo (MCM) para encontrar un denominador común." +
@@ -2214,7 +2214,7 @@ export const FRACCIONES : Topic[] = [
 {
   id: "radicacion-fracciones",
   titulo: "Radicación de fracciones",
-  youtubeId: "ID_DEL_VIDEO",
+  youtubeId: "APzTZIeNA6o",
 
   texto:
     "La radicación de fracciones es una operación que permite encontrar un número que, al elevarse a determinada potencia, produce la fracción original." +
@@ -2332,7 +2332,7 @@ export const FRACCIONES : Topic[] = [
 {
   id: "radicacion-fracciones-parte-2",
   titulo: "Radicación de fracciones - Parte 2",
-  youtubeId: "ID_DEL_VIDEO",
+  youtubeId: "UAM3IIOYD_s",
 
   texto:
     "En esta segunda parte aprenderemos a calcular diferentes tipos de raíces de números fraccionarios." +
