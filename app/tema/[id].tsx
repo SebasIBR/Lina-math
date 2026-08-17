@@ -145,7 +145,7 @@ export default function TemaDetalle() {
             {/* QUIZ (aparece al terminar el video) */}
             {showQuiz && (
               <View style={styles.quizBox}>
-                <Text style={styles.quizTitle}>Mini-quiz (3 preguntas)</Text>
+                <Text style={styles.quizTitle}>Mini-quiz (preguntas)</Text>
                 <Text style={styles.quizHint}>Selecciona la respuesta correcta.</Text>
 
                 {data.quiz.map((q) => (
