@@ -1,73 +1,265 @@
 import React, { useEffect, useRef } from "react";
-import { View, Text, StyleSheet, Pressable, Animated } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Pressable,
+  Animated,
+  ScrollView,
+  useWindowDimensions,
+} from "react-native";
+
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
+
+import {
+  SafeAreaView,
+  useSafeAreaInsets,
+} from "react-native-safe-area-context";
+
 import { theme } from "../src/theme";
-import { SafeAreaView } from "react-native-safe-area-context";
+
+import {
+  responsiveFont,
+  responsiveSpace,
+} from "../src/utils/responsive";
 
 export default function HomeScreen() {
   const router = useRouter();
 
+  const { width, height } = useWindowDimensions();
+  const insets = useSafeAreaInsets();
+
   const fade = useRef(new Animated.Value(0)).current;
   const up = useRef(new Animated.Value(14)).current;
 
+  const isSmallScreen = height < 700;
+  const isTablet = width >= 768;
+
+  const horizontalPadding = isTablet
+    ? Math.min(width * 0.12, 100)
+    : responsiveSpace(width, 20);
+
   useEffect(() => {
     Animated.parallel([
-      Animated.timing(fade, { toValue: 1, duration: 450, useNativeDriver: true }),
-      Animated.timing(up, { toValue: 0, duration: 450, useNativeDriver: true }),
+      Animated.timing(fade, {
+        toValue: 1,
+        duration: 450,
+        useNativeDriver: true,
+      }),
+
+      Animated.timing(up, {
+        toValue: 0,
+        duration: 450,
+        useNativeDriver: true,
+      }),
     ]).start();
   }, []);
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-    <LinearGradient colors={[theme.colors.bg1, theme.colors.bg2]} style={styles.container}>
-      <Animated.View style={[styles.content, { opacity: fade, transform: [{ translateY: up }] }]}>
-        <View style={styles.hero}>
-          <Text style={styles.badge}>BIENVENIDO</Text>
+    <SafeAreaView style={styles.safeArea}>
+      <LinearGradient
+        colors={[
+          theme.colors.bg1,
+          theme.colors.bg2,
+        ]}
+        style={styles.gradient}
+      >
+        <ScrollView
+          style={styles.scroll}
+          contentContainerStyle={[
+            styles.scrollContent,
+            {
+              paddingHorizontal: horizontalPadding,
+              paddingTop: responsiveSpace(width, 14),
+              paddingBottom:
+                insets.bottom +
+                responsiveSpace(width, 20),
+            },
+          ]}
+          showsVerticalScrollIndicator={false}
+        >
+          <Animated.View
+            style={[
+              styles.contentWrapper,
+              isTablet && styles.contentTablet,
+              {
+                opacity: fade,
+                transform: [{ translateY: up }],
+              },
+            ]}
+          >
+            <View
+              style={[
+                styles.hero,
+                {
+                  padding: responsiveSpace(width, 20),
+                },
+              ]}
+            >
+              <Text
+                style={[
+                  styles.badge,
+                  {
+                    fontSize: responsiveFont(
+                      width,
+                      12,
+                      11,
+                      14
+                    ),
+                  },
+                ]}
+              >
+                BIENVENIDA
+              </Text>
 
-          <Text style={styles.title}>LINAMATH</Text>
+              <Text
+                maxFontSizeMultiplier={1.2}
+                style={[
+                  styles.title,
+                  {
+                    fontSize: responsiveFont(
+                      width,
+                      isSmallScreen ? 36 : 44,
+                      32,
+                      52
+                    ),
+                  },
+                ]}
+              >
+                LINAMATH
+              </Text>
 
-          <Text style={styles.subtitle}>
-            Un espacio de aprendizaje diseñado para reforzar contenidos matemáticos de aritmetica
-            con explicaciones claras, recursos audiovisuales y acompañamiento paso a paso.
-          </Text>
+              <Text
+                style={[
+                  styles.subtitle,
+                  {
+                    fontSize: responsiveFont(
+                      width,
+                      16,
+                      14,
+                      18
+                    ),
+                    lineHeight: responsiveFont(
+                      width,
+                      23,
+                      20,
+                      27
+                    ),
+                  },
+                ]}
+              >
+                Un espacio de aprendizaje diseñado
+                para reforzar contenidos matemáticos
+                mediante videos, explicaciones claras
+                y actividades interactivas.
+              </Text>
 
-          <View style={styles.divider} />
+              <View style={styles.divider} />
 
-          <Text style={styles.sectionTitle}>En esta aplicación podrás:</Text>
+              <Text
+                style={[
+                  styles.sectionTitle,
+                  {
+                    fontSize: responsiveFont(
+                      width,
+                      16,
+                      15,
+                      19
+                    ),
+                  },
+                ]}
+              >
+                En LINAMATH podrás:
+              </Text>
 
-          <View style={styles.list}>
-            <Text style={styles.bullet}>• Explorar temas de aritmetica de forma organizada.</Text>
-            <Text style={styles.bullet}>• Ver videos explicativos para comprender cada contenido.</Text>
-            <Text style={styles.bullet}>• Leer un resumen breve para recordar lo más importante de cada tema.</Text>
-          </View>
+              <View style={styles.list}>
+                <Text style={styles.bullet}>
+                  • Explorar contenidos matemáticos
+                  de forma organizada.
+                </Text>
 
-          <View style={styles.howBox}>
-            <Text style={styles.howTitle}>¿Cómo funciona?</Text>
-            <Text style={styles.howText}>
-              1) Presiona <Text style={styles.bold}>Empezar</Text>.{"\n"}
-              2) Elige un <Text style={styles.bold}>tema</Text>.{"\n"}
-              3) Mira el <Text style={styles.bold}>video</Text> y revisa la <Text style={styles.bold}>explicación</Text>.{"\n"}
-              4) Resuelve el <Text style={styles.bold}>quiz</Text> y mira tus <Text style={styles.bold}>respuestas</Text>.
-            </Text>
-          </View>
-        </View>
-      </Animated.View>
+                <Text style={styles.bullet}>
+                  • Aprender mediante videos
+                  explicativos.
+                </Text>
 
-      <Pressable style={styles.button} onPress={() => router.push("/temas")}>
-        <Text style={styles.buttonText}>EMPEZAR</Text>
-      </Pressable>
-    </LinearGradient>
+                <Text style={styles.bullet}>
+                  • Consultar explicaciones y
+                  ejemplos.
+                </Text>
+
+                <Text style={styles.bullet}>
+                  • Resolver cuestionarios para
+                  comprobar tu aprendizaje.
+                </Text>
+              </View>
+
+              <View style={styles.howBox}>
+                <Text style={styles.howTitle}>
+                  ¿Cómo funciona?
+                </Text>
+
+                <Text style={styles.howText}>
+                  1. Presiona Empezar.{"\n"}
+                  2. Selecciona un tema.{"\n"}
+                  3. Mira el video.{"\n"}
+                  4. Lee la explicación.{"\n"}
+                  5. Resuelve el cuestionario.
+                </Text>
+              </View>
+            </View>
+
+            <Pressable
+              style={({ pressed }) => [
+                styles.button,
+                pressed && styles.buttonPressed,
+              ]}
+              onPress={() =>
+                router.push("/temas")
+              }
+            >
+              <Text style={styles.buttonText}>
+                EMPEZAR
+              </Text>
+            </Pressable>
+          </Animated.View>
+        </ScrollView>
+      </LinearGradient>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20, justifyContent: "space-between" },
-  content: { marginTop: 24 },
+  safeArea: {
+    flex: 1,
+    backgroundColor: theme.colors.bg1,
+  },
+
+  gradient: {
+    flex: 1,
+  },
+
+  scroll: {
+    flex: 1,
+  },
+
+  scrollContent: {
+    flexGrow: 1,
+    justifyContent: "center",
+  },
+
+  contentWrapper: {
+    width: "100%",
+    alignSelf: "center",
+  },
+
+  contentTablet: {
+    maxWidth: 720,
+  },
 
   hero: {
-    padding: 18,
+    width: "100%",
     borderRadius: theme.radius.xl,
     backgroundColor: theme.colors.card,
     borderWidth: 1,
@@ -78,60 +270,95 @@ const styles = StyleSheet.create({
     alignSelf: "flex-start",
     paddingHorizontal: 12,
     paddingVertical: 7,
-    borderRadius: 999,
-    backgroundColor: "rgba(45,107,255,0.18)",
+    borderRadius: 100,
+    backgroundColor:
+      "rgba(45,107,255,0.18)",
     borderWidth: 1,
-    borderColor: "rgba(45,107,255,0.35)",
+    borderColor:
+      "rgba(45,107,255,0.35)",
     color: theme.colors.text,
-    fontSize: 12,
     fontWeight: "900",
     letterSpacing: 1,
   },
 
-  title: { marginTop: 14, color: theme.colors.text, fontSize: 44, fontWeight: "900" },
+  title: {
+    marginTop: 16,
+    color: theme.colors.text,
+    fontWeight: "900",
+  },
 
   subtitle: {
     marginTop: 10,
     color: theme.colors.textMuted,
-    fontSize: 16,
-    lineHeight: 22,
   },
 
   divider: {
-    marginTop: 16,
-    marginBottom: 14,
     height: 1,
-    backgroundColor: "rgba(255,255,255,0.12)",
+    marginVertical: 18,
+    backgroundColor:
+      "rgba(255,255,255,0.12)",
   },
 
-  sectionTitle: { color: theme.colors.text, fontSize: 16, fontWeight: "900" },
+  sectionTitle: {
+    color: theme.colors.text,
+    fontWeight: "900",
+  },
 
-  list: { marginTop: 10, gap: 8 },
+  list: {
+    marginTop: 12,
+    gap: 10,
+  },
 
   bullet: {
     color: theme.colors.textMuted,
     fontSize: 14,
-    lineHeight: 20,
+    lineHeight: 21,
   },
 
   howBox: {
-    marginTop: 16,
+    marginTop: 18,
     padding: 14,
     borderRadius: theme.radius.lg,
-    backgroundColor: "rgba(255,255,255,0.06)",
+    backgroundColor:
+      "rgba(255,255,255,0.06)",
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.10)",
+    borderColor:
+      "rgba(255,255,255,0.10)",
   },
-  howTitle: { color: theme.colors.text, fontSize: 14, fontWeight: "900" },
-  howText: { marginTop: 8, color: theme.colors.textMuted, lineHeight: 20, fontSize: 13 },
 
-  bold: { fontWeight: "900", color: theme.colors.text },
+  howTitle: {
+    color: theme.colors.text,
+    fontSize: 14,
+    fontWeight: "900",
+  },
+
+  howText: {
+    marginTop: 8,
+    color: theme.colors.textMuted,
+    fontSize: 13,
+    lineHeight: 21,
+  },
 
   button: {
-    backgroundColor: theme.colors.primary,
+    width: "100%",
+    marginTop: 18,
     paddingVertical: 16,
+    paddingHorizontal: 20,
     borderRadius: theme.radius.lg,
+    backgroundColor:
+      theme.colors.primary,
     alignItems: "center",
   },
-  buttonText: { color: "#fff", fontWeight: "900", fontSize: 16, letterSpacing: 1 },
+
+  buttonPressed: {
+    opacity: 0.82,
+    transform: [{ scale: 0.99 }],
+  },
+
+  buttonText: {
+    color: "#FFFFFF",
+    fontWeight: "900",
+    fontSize: 16,
+    letterSpacing: 1,
+  },
 });
