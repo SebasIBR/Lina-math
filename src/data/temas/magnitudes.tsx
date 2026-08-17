@@ -405,7 +405,7 @@ export const MAGNITUDES : Topic[] = [
 {
   id: "ajedrez-tablero-piezas",
   titulo: "Ajedrez - El tablero y las piezas",
-  youtubeId: "ID_DEL_VIDEO",
+  youtubeId: "qYZFPXkVLfo",
 
   texto:
     "El ajedrez es un juego de estrategia que se practica entre dos jugadores sobre un tablero." +
@@ -522,7 +522,7 @@ export const MAGNITUDES : Topic[] = [
 {
   id: "ajedrez-movimientos-jaque-mate",
   titulo: "Ajedrez - Movimientos y jaque mate",
-  youtubeId: "ID_DEL_VIDEO",
+  youtubeId: "t0UUZzSexds",
 
   texto:
     "Para jugar ajedrez debemos conocer cómo se mueve cada una de las piezas." +
